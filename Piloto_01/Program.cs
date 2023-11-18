@@ -1,12 +1,17 @@
-﻿using System.Transactions;
+﻿using Piloto_01;
+using System.Transactions;
 class Program
 {
     static void Main()
     {
-        AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+        //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
-        var result = Divide(10, 0);
-        Console.WriteLine(result);
+        //var result = Divide(10, 0);
+        //Console.WriteLine(result);
+        var meuTexto = "Victoria";
+        var textoInvertido = meuTexto.Inverter();
+        Console.WriteLine(textoInvertido);
+        Console.Write(meuTexto);
     }
 
     private static void CurrentDomain_UnhandledException (object sender, UnhandledExceptionEventArgs e)
